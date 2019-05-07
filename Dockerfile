@@ -10,14 +10,14 @@ RUN \
   pacman-db-upgrade && \
   pacman -Su --noconfirm --noprogressbar --quiet && \
   # Install useful packages
-  pacman -S sudo systemd --noconfirm --noprogressbar --quiet && \
+  pacman -S sudo systemd tar --noconfirm --noprogressbar --quiet && \
   # Install what is needed for building native extensions
   pacman -S gcc make sed awk gzip grep --noconfirm --noprogressbar --quiet && \
   pacman -S autoconf automake --noconfirm --noprogressbar --quiet && \
   # Install Ruby
   pacman -S ruby --noconfirm --noprogressbar --quiet && \
   # Install useful tools
-  pacman -S vim tree iproute2 tar --noconfirm --noprogressbar --quiet && \
+  pacman -S vim tree iproute2 --noconfirm --noprogressbar --quiet && \
   # Install Chef from gems
   gem install chef --no-user-install --no-document && \
   # Fake gem installation in chef directory
