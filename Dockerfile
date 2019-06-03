@@ -19,7 +19,7 @@ RUN \
   # Install useful tools
   pacman -S vim tree iproute2 --noconfirm --noprogressbar --quiet && \
   # Install Chef from gems
-  gem install chef --no-user-install --no-document && \
+  gem install chef chef-bin --no-user-install --no-document && \
   # Fake gem installation in chef directory
   mkdir -p /opt/chef/embedded/bin/ && \
   ln -s /usr/bin/gem /opt/chef/embedded/bin/gem && \
